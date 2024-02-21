@@ -1,4 +1,5 @@
 module.exports = {
+    mode: "jit",
     purge: [
         "./storage/framework/views/*.php",
         "./resources/**/*.blade.php",
@@ -7,10 +8,14 @@ module.exports = {
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            width: {
+                18: "4.5rem",
+            },
+        },
     },
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/line-clamp")],
 };

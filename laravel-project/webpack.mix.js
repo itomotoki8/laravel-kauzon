@@ -14,9 +14,10 @@ const mix = require("laravel-mix");
 mix.js("resources/js/app.js", "public/js")
     .js("resources/js/home.js", "public/js")
     .js("resources/js/item.js", "public/js")
-    .autoload({
-        jquery: ["$", "window.jQuery"],
-    })
+    .js("resources/js/cart.js", "public/js")
+    .js("resources/js/create.js", "public/js")
+    .js("resources/js/review.js", "public/js")
+    .js("resources/js/category.js", "public/js")
     .postCss("resources/css/app.css", "public/css", [
         require("postcss-import"),
         require("tailwindcss"),
